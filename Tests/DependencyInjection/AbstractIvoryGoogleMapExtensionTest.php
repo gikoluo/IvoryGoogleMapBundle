@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\DependencyInjection;
+namespace Giko\BaiduMapBundle\Tests\DependencyInjection;
 
 use Ivory\GoogleMap\Overlays\MarkerCluster;
 use Ivory\GoogleMap\Services\Base\TravelMode;
 use Ivory\GoogleMap\Services\Base\UnitSystem;
-use Ivory\GoogleMapBundle\DependencyInjection\IvoryGoogleMapExtension;
+use Giko\BaiduMapBundle\DependencyInjection\IvoryGoogleMapExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Scope;
 use Widop\HttpAdapterBundle\DependencyInjection\WidopHttpAdapterExtension;
@@ -70,7 +70,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $bound = $this->container->get('ivory_google_map.bound');
+        $bound = $this->container->get('giko_baidu_map.bound');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Base\Bound', $bound);
         $this->assertSame('bound_', substr($bound->getJavascriptVariable(), 0, 6));
@@ -83,7 +83,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'bound');
         $this->container->compile();
 
-        $bound = $this->container->get('ivory_google_map.bound');
+        $bound = $this->container->get('giko_baidu_map.bound');
 
         $this->assertSame('b', substr($bound->getJavascriptVariable(), 0, 1));
 
@@ -104,8 +104,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.bound'),
-            $this->container->get('ivory_google_map.bound')
+            $this->container->get('giko_baidu_map.bound'),
+            $this->container->get('giko_baidu_map.bound')
         );
     }
 
@@ -114,7 +114,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $coordinate = $this->container->get('ivory_google_map.coordinate');
+        $coordinate = $this->container->get('giko_baidu_map.coordinate');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Base\Coordinate', $coordinate);
 
@@ -129,7 +129,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'coordinate');
         $this->container->compile();
 
-        $coordinate = $this->container->get('ivory_google_map.coordinate');
+        $coordinate = $this->container->get('giko_baidu_map.coordinate');
 
         $this->assertSame('foo', substr($coordinate->getJavascriptVariable(), 0, 3));
         $this->assertSame(1.1, $coordinate->getLatitude());
@@ -143,8 +143,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.coordinate'),
-            $this->container->get('ivory_google_map.coordinate')
+            $this->container->get('giko_baidu_map.coordinate'),
+            $this->container->get('giko_baidu_map.coordinate')
         );
     }
 
@@ -153,7 +153,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $point = $this->container->get('ivory_google_map.point');
+        $point = $this->container->get('giko_baidu_map.point');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Base\Point', $point);
         $this->assertSame('point_', substr($point->getJavascriptVariable(), 0, 6));
@@ -166,7 +166,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'point');
         $this->container->compile();
 
-        $point = $this->container->get('ivory_google_map.point');
+        $point = $this->container->get('giko_baidu_map.point');
 
         $this->assertSame('foo', substr($point->getJavascriptVariable(), 0, 3));
         $this->assertSame(1.1, $point->getX());
@@ -179,8 +179,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.point'),
-            $this->container->get('ivory_google_map.point')
+            $this->container->get('giko_baidu_map.point'),
+            $this->container->get('giko_baidu_map.point')
         );
     }
 
@@ -189,7 +189,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $size = $this->container->get('ivory_google_map.size');
+        $size = $this->container->get('giko_baidu_map.size');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Base\Size', $size);
 
@@ -207,7 +207,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'size');
         $this->container->compile();
 
-        $size = $this->container->get('ivory_google_map.size');
+        $size = $this->container->get('giko_baidu_map.size');
 
         $this->assertSame('foo', substr($size->getJavascriptVariable(), 0, 3));
 
@@ -224,8 +224,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.size'),
-            $this->container->get('ivory_google_map.size')
+            $this->container->get('giko_baidu_map.size'),
+            $this->container->get('giko_baidu_map.size')
         );
     }
 
@@ -234,7 +234,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $mapTypeControl = $this->container->get('ivory_google_map.map_type_control');
+        $mapTypeControl = $this->container->get('giko_baidu_map.map_type_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\MapTypeControl', $mapTypeControl);
         $this->assertSame(array('roadmap', 'satellite'), $mapTypeControl->getMapTypeIds());
@@ -247,7 +247,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'map_type_control');
         $this->container->compile();
 
-        $mapTypeControl = $this->container->get('ivory_google_map.map_type_control');
+        $mapTypeControl = $this->container->get('giko_baidu_map.map_type_control');
 
         $this->assertEquals(array('hybrid', 'terrain'), $mapTypeControl->getMapTypeIds());
         $this->assertEquals('top_center', $mapTypeControl->getControlPosition());
@@ -260,8 +260,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.map_type_control'),
-            $this->container->get('ivory_google_map.map_type_control')
+            $this->container->get('giko_baidu_map.map_type_control'),
+            $this->container->get('giko_baidu_map.map_type_control')
         );
     }
 
@@ -270,7 +270,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $overviewMapControl = $this->container->get('ivory_google_map.overview_map_control');
+        $overviewMapControl = $this->container->get('giko_baidu_map.overview_map_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\OverviewMapControl', $overviewMapControl);
         $this->assertFalse($overviewMapControl->isOpened());
@@ -281,7 +281,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'overview_map_control');
         $this->container->compile();
 
-        $overviewMapControl = $this->container->get('ivory_google_map.overview_map_control');
+        $overviewMapControl = $this->container->get('giko_baidu_map.overview_map_control');
 
         $this->assertTrue($overviewMapControl->isOpened());
     }
@@ -292,8 +292,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.overview_map_control'),
-            $this->container->get('ivory_google_map.overview_map_control')
+            $this->container->get('giko_baidu_map.overview_map_control'),
+            $this->container->get('giko_baidu_map.overview_map_control')
         );
     }
 
@@ -302,7 +302,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $panControl = $this->container->get('ivory_google_map.pan_control');
+        $panControl = $this->container->get('giko_baidu_map.pan_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\PanControl', $panControl);
         $this->assertSame('top_left', $panControl->getControlPosition());
@@ -313,7 +313,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'pan_control');
         $this->container->compile();
 
-        $panControl = $this->container->get('ivory_google_map.pan_control');
+        $panControl = $this->container->get('giko_baidu_map.pan_control');
 
         $this->assertSame('top_center', $panControl->getControlPosition());
     }
@@ -324,8 +324,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.pan_control'),
-            $this->container->get('ivory_google_map.pan_control')
+            $this->container->get('giko_baidu_map.pan_control'),
+            $this->container->get('giko_baidu_map.pan_control')
         );
     }
 
@@ -334,7 +334,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $rotateControl = $this->container->get('ivory_google_map.rotate_control');
+        $rotateControl = $this->container->get('giko_baidu_map.rotate_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\RotateControl', $rotateControl);
         $this->assertSame('top_left', $rotateControl->getControlPosition());
@@ -345,7 +345,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'rotate_control');
         $this->container->compile();
 
-        $rotateControl = $this->container->get('ivory_google_map.rotate_control');
+        $rotateControl = $this->container->get('giko_baidu_map.rotate_control');
 
         $this->assertSame('top_center', $rotateControl->getControlPosition());
     }
@@ -356,8 +356,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.rotate_control'),
-            $this->container->get('ivory_google_map.rotate_control')
+            $this->container->get('giko_baidu_map.rotate_control'),
+            $this->container->get('giko_baidu_map.rotate_control')
         );
     }
 
@@ -366,7 +366,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $scaleControl = $this->container->get('ivory_google_map.scale_control');
+        $scaleControl = $this->container->get('giko_baidu_map.scale_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\ScaleControl', $scaleControl);
         $this->assertSame('bottom_left', $scaleControl->getControlPosition());
@@ -378,7 +378,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'scale_control');
         $this->container->compile();
 
-        $scaleControl = $this->container->get('ivory_google_map.scale_control');
+        $scaleControl = $this->container->get('giko_baidu_map.scale_control');
 
         $this->assertSame('top_center', $scaleControl->getControlPosition());
         $this->assertSame('default', $scaleControl->getScaleControlStyle());
@@ -390,8 +390,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.scale_control'),
-            $this->container->get('ivory_google_map.scale_control')
+            $this->container->get('giko_baidu_map.scale_control'),
+            $this->container->get('giko_baidu_map.scale_control')
         );
     }
 
@@ -400,7 +400,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $streetViewControl = $this->container->get('ivory_google_map.street_view_control');
+        $streetViewControl = $this->container->get('giko_baidu_map.street_view_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\StreetViewControl', $streetViewControl);
         $this->assertSame('top_left', $streetViewControl->getControlPosition());
@@ -411,7 +411,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'street_view_control');
         $this->container->compile();
 
-        $streetViewControl = $this->container->get('ivory_google_map.street_view_control');
+        $streetViewControl = $this->container->get('giko_baidu_map.street_view_control');
 
         $this->assertSame('top_center', $streetViewControl->getControlPosition());
     }
@@ -422,8 +422,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.street_view_control'),
-            $this->container->get('ivory_google_map.street_view_control')
+            $this->container->get('giko_baidu_map.street_view_control'),
+            $this->container->get('giko_baidu_map.street_view_control')
         );
     }
 
@@ -432,7 +432,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $zoomControl = $this->container->get('ivory_google_map.zoom_control');
+        $zoomControl = $this->container->get('giko_baidu_map.zoom_control');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Controls\ZoomControl', $zoomControl);
         $this->assertSame('top_left', $zoomControl->getControlPosition());
@@ -444,7 +444,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'zoom_control');
         $this->container->compile();
 
-        $zoomControl = $this->container->get('ivory_google_map.zoom_control');
+        $zoomControl = $this->container->get('giko_baidu_map.zoom_control');
 
         $this->assertSame('top_center', $zoomControl->getControlPosition());
         $this->assertSame('default', $zoomControl->getZoomControlStyle());
@@ -456,8 +456,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.zoom_control'),
-            $this->container->get('ivory_google_map.zoom_control')
+            $this->container->get('giko_baidu_map.zoom_control'),
+            $this->container->get('giko_baidu_map.zoom_control')
         );
     }
 
@@ -466,7 +466,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $event = $this->container->get('ivory_google_map.event');
+        $event = $this->container->get('giko_baidu_map.event');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Events\Event', $event);
         $this->assertSame('event_', substr($event->getJavascriptVariable(), 0, 6));
@@ -477,7 +477,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'event');
         $this->container->compile();
 
-        $event = $this->container->get('ivory_google_map.event');
+        $event = $this->container->get('giko_baidu_map.event');
 
         $this->assertSame('e', substr($event->getJavascriptVariable(), 0, 1));
     }
@@ -488,8 +488,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.event'),
-            $this->container->get('ivory_google_map.event')
+            $this->container->get('giko_baidu_map.event'),
+            $this->container->get('giko_baidu_map.event')
         );
     }
 
@@ -499,8 +499,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.event_manager'),
-            $this->container->get('ivory_google_map.event_manager')
+            $this->container->get('giko_baidu_map.event_manager'),
+            $this->container->get('giko_baidu_map.event_manager')
         );
     }
 
@@ -509,7 +509,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $kmlLayer = $this->container->get('ivory_google_map.kml_layer');
+        $kmlLayer = $this->container->get('giko_baidu_map.kml_layer');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Layers\KMLLayer', $kmlLayer);
         $this->assertSame('kml_layer_', substr($kmlLayer->getJavascriptVariable(), 0, 10));
@@ -522,7 +522,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'kml_layer');
         $this->container->compile();
 
-        $kmlLayer = $this->container->get('ivory_google_map.kml_layer');
+        $kmlLayer = $this->container->get('giko_baidu_map.kml_layer');
 
         $this->assertSame('kl', substr($kmlLayer->getJavascriptVariable(), 0, 2));
         $this->assertSame('url', $kmlLayer->getUrl());
@@ -535,8 +535,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.kml_layer'),
-            $this->container->get('ivory_google_map.kml_layer')
+            $this->container->get('giko_baidu_map.kml_layer'),
+            $this->container->get('giko_baidu_map.kml_layer')
         );
     }
 
@@ -545,7 +545,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $circle = $this->container->get('ivory_google_map.circle');
+        $circle = $this->container->get('giko_baidu_map.circle');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Circle', $circle);
         $this->assertEquals(substr($circle->getJavascriptVariable(), 0, 7), 'circle_');
@@ -560,7 +560,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'circle');
         $this->container->compile();
 
-        $circle = $this->container->get('ivory_google_map.circle');
+        $circle = $this->container->get('giko_baidu_map.circle');
 
         $this->assertSame('c', substr($circle->getJavascriptVariable(), 0, 1));
 
@@ -578,8 +578,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.circle'),
-            $this->container->get('ivory_google_map.circle')
+            $this->container->get('giko_baidu_map.circle'),
+            $this->container->get('giko_baidu_map.circle')
         );
     }
 
@@ -588,7 +588,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $encodedPolyline = $this->container->get('ivory_google_map.encoded_polyline');
+        $encodedPolyline = $this->container->get('giko_baidu_map.encoded_polyline');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\EncodedPolyline', $encodedPolyline);
         $this->assertSame('encoded_polyline_', substr($encodedPolyline->getJavascriptVariable(), 0, 17));
@@ -599,7 +599,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'encoded_polyline');
         $this->container->compile();
 
-        $encodedPolyline = $this->container->get('ivory_google_map.encoded_polyline');
+        $encodedPolyline = $this->container->get('giko_baidu_map.encoded_polyline');
 
         $this->assertSame('ep', substr($encodedPolyline->getJavascriptVariable(), 0, 2));
         $this->assertSame(array('option' => 'value'), $encodedPolyline->getOptions());
@@ -611,8 +611,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.encoded_polyline'),
-            $this->container->get('ivory_google_map.encoded_polyline')
+            $this->container->get('giko_baidu_map.encoded_polyline'),
+            $this->container->get('giko_baidu_map.encoded_polyline')
         );
     }
 
@@ -621,7 +621,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $groundOverlay = $this->container->get('ivory_google_map.ground_overlay');
+        $groundOverlay = $this->container->get('giko_baidu_map.ground_overlay');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\GroundOverlay', $groundOverlay);
 
@@ -642,7 +642,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'ground_overlay');
         $this->container->compile();
 
-        $groundOverlay = $this->container->get('ivory_google_map.ground_overlay');
+        $groundOverlay = $this->container->get('giko_baidu_map.ground_overlay');
 
         $this->assertEquals('go', substr($groundOverlay->getJavascriptVariable(), 0, 2));
         $this->assertEquals('url', $groundOverlay->getUrl());
@@ -662,8 +662,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.ground_overlay'),
-            $this->container->get('ivory_google_map.ground_overlay')
+            $this->container->get('giko_baidu_map.ground_overlay'),
+            $this->container->get('giko_baidu_map.ground_overlay')
         );
     }
 
@@ -672,7 +672,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $infoWindow = $this->container->get('ivory_google_map.info_window');
+        $infoWindow = $this->container->get('giko_baidu_map.info_window');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\InfoWindow', $infoWindow);
         $this->assertEquals('info_window_', substr($infoWindow->getJavascriptVariable(), 0, 12));
@@ -693,7 +693,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'info_window');
         $this->container->compile();
 
-        $infoWindow = $this->container->get('ivory_google_map.info_window');
+        $infoWindow = $this->container->get('giko_baidu_map.info_window');
 
         $this->assertSame('iw', substr($infoWindow->getJavascriptVariable(), 0, 2));
 
@@ -723,8 +723,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.info_window'),
-            $this->container->get('ivory_google_map.info_window')
+            $this->container->get('giko_baidu_map.info_window'),
+            $this->container->get('giko_baidu_map.info_window')
         );
     }
 
@@ -733,7 +733,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $markerImage = $this->container->get('ivory_google_map.marker_image');
+        $markerImage = $this->container->get('giko_baidu_map.marker_image');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\MarkerImage', $markerImage);
         $this->assertSame('marker_image_', substr($markerImage->getJavascriptVariable(), 0, 13));
@@ -757,7 +757,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'marker_image');
         $this->container->compile();
 
-        $markerImage = $this->container->get('ivory_google_map.marker_image');
+        $markerImage = $this->container->get('giko_baidu_map.marker_image');
 
         $this->assertSame('mi', substr($markerImage->getJavascriptVariable(), 0, 2));
         $this->assertSame('url', $markerImage->getUrl());
@@ -789,8 +789,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.marker_image'),
-            $this->container->get('ivory_google_map.marker_image')
+            $this->container->get('giko_baidu_map.marker_image'),
+            $this->container->get('giko_baidu_map.marker_image')
         );
     }
 
@@ -799,7 +799,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $marker = $this->container->get('ivory_google_map.marker');
+        $marker = $this->container->get('giko_baidu_map.marker');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Marker', $marker);
         $this->assertSame('marker_', substr($marker->getJavascriptVariable(), 0, 7));
@@ -817,7 +817,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'marker');
         $this->container->compile();
 
-        $marker = $this->container->get('ivory_google_map.marker');
+        $marker = $this->container->get('giko_baidu_map.marker');
 
         $this->assertSame('m', substr($marker->getJavascriptVariable(), 0, 1));
 
@@ -835,8 +835,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.marker'),
-            $this->container->get('ivory_google_map.marker')
+            $this->container->get('giko_baidu_map.marker'),
+            $this->container->get('giko_baidu_map.marker')
         );
     }
 
@@ -845,7 +845,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $markerShape = $this->container->get('ivory_google_map.marker_shape');
+        $markerShape = $this->container->get('giko_baidu_map.marker_shape');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\MarkerShape', $markerShape);
         $this->assertSame('marker_shape_', substr($markerShape->getJavascriptVariable(), 0, 13));
@@ -859,7 +859,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'marker_shape');
         $this->container->compile();
 
-        $markerShape = $this->container->get('ivory_google_map.marker_shape');
+        $markerShape = $this->container->get('giko_baidu_map.marker_shape');
 
         $this->assertSame('ms', substr($markerShape->getJavascriptVariable(), 0, 2));
         $this->assertSame('rect', $markerShape->getType());
@@ -873,8 +873,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.marker_shape'),
-            $this->container->get('ivory_google_map.marker_shape')
+            $this->container->get('giko_baidu_map.marker_shape'),
+            $this->container->get('giko_baidu_map.marker_shape')
         );
     }
 
@@ -883,7 +883,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $markerCluster = $this->container->get('ivory_google_map.marker_cluster');
+        $markerCluster = $this->container->get('giko_baidu_map.marker_cluster');
 
         $this->assertSame('marker_cluster_', substr($markerCluster->getJavascriptVariable(), 0, 15));
         $this->assertSame('default', $markerCluster->getType());
@@ -896,7 +896,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'marker_cluster');
         $this->container->compile();
 
-        $markerCluster = $this->container->get('ivory_google_map.marker_cluster');
+        $markerCluster = $this->container->get('giko_baidu_map.marker_cluster');
 
         $this->assertSame('mc', substr($markerCluster->getJavascriptVariable(), 0, 2));
         $this->assertSame('marker_cluster', $markerCluster->getType());
@@ -910,8 +910,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.marker_cluster'),
-            $this->container->get('ivory_google_map.marker_cluster')
+            $this->container->get('giko_baidu_map.marker_cluster'),
+            $this->container->get('giko_baidu_map.marker_cluster')
         );
     }
 
@@ -920,7 +920,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $polygon = $this->container->get('ivory_google_map.polygon');
+        $polygon = $this->container->get('giko_baidu_map.polygon');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Polygon', $polygon);
         $this->assertSame('polygon_', substr($polygon->getJavascriptVariable(), 0, 8));
@@ -931,7 +931,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'polygon');
         $this->container->compile();
 
-        $polygon = $this->container->get('ivory_google_map.polygon');
+        $polygon = $this->container->get('giko_baidu_map.polygon');
 
         $this->assertSame('p', substr($polygon->getJavascriptVariable(), 0, 1));
         $this->assertSame(array('option' => 'value'), $polygon->getOptions());
@@ -943,8 +943,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.polygon'),
-            $this->container->get('ivory_google_map.polygon')
+            $this->container->get('giko_baidu_map.polygon'),
+            $this->container->get('giko_baidu_map.polygon')
         );
     }
 
@@ -953,7 +953,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $polyline = $this->container->get('ivory_google_map.polyline');
+        $polyline = $this->container->get('giko_baidu_map.polyline');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Polyline', $polyline);
         $this->assertSame('polyline_', substr($polyline->getJavascriptVariable(), 0, 9));
@@ -964,7 +964,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'polyline');
         $this->container->compile();
 
-        $polyline = $this->container->get('ivory_google_map.polyline');
+        $polyline = $this->container->get('giko_baidu_map.polyline');
 
         $this->assertSame('p', substr($polyline->getJavascriptVariable(), 0, 1));
         $this->assertSame(array('option' => 'value'), $polyline->getOptions());
@@ -976,8 +976,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.polyline'),
-            $this->container->get('ivory_google_map.polyline')
+            $this->container->get('giko_baidu_map.polyline'),
+            $this->container->get('giko_baidu_map.polyline')
         );
     }
 
@@ -986,7 +986,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $rectangle = $this->container->get('ivory_google_map.rectangle');
+        $rectangle = $this->container->get('giko_baidu_map.rectangle');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Overlays\Rectangle', $rectangle);
         $this->assertSame('rectangle_', substr($rectangle->getJavascriptVariable(), 0, 10));
@@ -1005,7 +1005,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'rectangle');
         $this->container->compile();
 
-        $rectangle = $this->container->get('ivory_google_map.rectangle');
+        $rectangle = $this->container->get('giko_baidu_map.rectangle');
 
         $this->assertSame('r', substr($rectangle->getJavascriptVariable(), 0, 1));
 
@@ -1024,8 +1024,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.rectangle'),
-            $this->container->get('ivory_google_map.rectangle')
+            $this->container->get('giko_baidu_map.rectangle'),
+            $this->container->get('giko_baidu_map.rectangle')
         );
     }
 
@@ -1034,7 +1034,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $map = $this->container->get('ivory_google_map.map');
+        $map = $this->container->get('giko_baidu_map.map');
 
         $this->assertSame('map_', substr($map->getJavascriptVariable(), 0, 4));
         $this->assertSame('map_canvas', $map->getHtmlContainerId());
@@ -1057,7 +1057,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'map');
         $this->container->compile();
 
-        $map = $this->container->get('ivory_google_map.map');
+        $map = $this->container->get('giko_baidu_map.map');
 
         $this->assertSame('foo', substr($map->getJavascriptVariable(), 0, 3));
         $this->assertSame('bar', $map->getHtmlContainerId());
@@ -1094,7 +1094,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'api');
         $this->container->compile();
 
-        $map = $this->container->get('ivory_google_map.map');
+        $map = $this->container->get('giko_baidu_map.map');
 
         $this->assertSame(array('places', 'geometry'), $map->getLibraries());
     }
@@ -1105,8 +1105,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.map'),
-            $this->container->get('ivory_google_map.map')
+            $this->container->get('giko_baidu_map.map'),
+            $this->container->get('giko_baidu_map.map')
         );
     }
 
@@ -1118,8 +1118,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->enterScope('request');
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Form\Type\PlacesAutocompleteType',
-            $this->container->get('ivory_google_map.places_autocomplete.form.type')
+            'Giko\BaiduMapBundle\Form\Type\PlacesAutocompleteType',
+            $this->container->get('giko_baidu_map.places_autocomplete.form.type')
         );
 
         $this->container->leaveScope('request');
@@ -1153,7 +1153,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $businessAccount = $this->container->get('ivory_google_map.business_account');
+        $businessAccount = $this->container->get('giko_baidu_map.business_account');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\BusinessAccount', $businessAccount);
 
@@ -1167,22 +1167,22 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'business_account');
         $this->container->compile();
 
-        $businessAccount = $this->container->get('ivory_google_map.business_account');
+        $businessAccount = $this->container->get('giko_baidu_map.business_account');
 
         $this->assertSame('client_id', $businessAccount->getClientId());
         $this->assertSame('secret', $businessAccount->getSecret());
         $this->assertSame('channel', $businessAccount->getChannel());
 
-        $this->assertTrue($this->container->get('ivory_google_map.directions')->hasBusinessAccount());
+        $this->assertTrue($this->container->get('giko_baidu_map.directions')->hasBusinessAccount());
         $this->assertSame(
             $businessAccount,
-            $this->container->get('ivory_google_map.directions')->getBusinessAccount()
+            $this->container->get('giko_baidu_map.directions')->getBusinessAccount()
         );
 
-        $this->assertTrue($this->container->get('ivory_google_map.distance_matrix')->hasBusinessAccount());
+        $this->assertTrue($this->container->get('giko_baidu_map.distance_matrix')->hasBusinessAccount());
         $this->assertSame(
             $businessAccount,
-            $this->container->get('ivory_google_map.distance_matrix')->getBusinessAccount()
+            $this->container->get('giko_baidu_map.distance_matrix')->getBusinessAccount()
         );
     }
 
@@ -1191,7 +1191,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.geocoder.event_listener.fake_request'));
+        $this->assertFalse($this->container->has('giko_baidu_map.geocoder.event_listener.fake_request'));
     }
 
     public function testFakeRequestListenerWithConfiguration()
@@ -1199,7 +1199,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'fake_request');
         $this->container->compile();
 
-        $fakeRequestListener = $this->container->get('ivory_google_map.geocoder.event_listener.fake_request');
+        $fakeRequestListener = $this->container->get('giko_baidu_map.geocoder.event_listener.fake_request');
 
         $this->assertSame('222.222.222.222', $fakeRequestListener->getFakeIp());
     }
@@ -1209,7 +1209,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.geocoder_request'));
+        $this->assertFalse($this->container->has('giko_baidu_map.geocoder_request'));
     }
 
     public function testGeocoderRequestServiceWithEnabledConfiguration()
@@ -1217,7 +1217,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'geocoder_enabled');
         $this->container->compile();
 
-        $request = $this->container->get('ivory_google_map.geocoder_request');
+        $request = $this->container->get('giko_baidu_map.geocoder_request');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\Geocoding\GeocoderRequest', $request);
         $this->assertFalse($request->hasAddress());
@@ -1233,7 +1233,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'geocoder_request');
         $this->container->compile();
 
-        $request = $this->container->get('ivory_google_map.geocoder_request');
+        $request = $this->container->get('giko_baidu_map.geocoder_request');
 
         $this->assertTrue($request->hasAddress());
         $this->assertSame('address', $request->getAddress());
@@ -1266,8 +1266,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.geocoder_request'),
-            $this->container->get('ivory_google_map.geocoder_request')
+            $this->container->get('giko_baidu_map.geocoder_request'),
+            $this->container->get('giko_baidu_map.geocoder_request')
         );
     }
 
@@ -1276,7 +1276,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.geocoder'));
+        $this->assertFalse($this->container->has('giko_baidu_map.geocoder'));
     }
 
     public function testGeocoderServiceWithEnabledConfiguration()
@@ -1284,7 +1284,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'geocoder_enabled');
         $this->container->compile();
 
-        $geocoder = $this->container->get('ivory_google_map.geocoder');
+        $geocoder = $this->container->get('giko_baidu_map.geocoder');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\Geocoding\Geocoder', $geocoder);
     }
@@ -1294,7 +1294,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'geocoder');
         $this->container->compile();
 
-        $geocoder = $this->container->get('ivory_google_map.geocoder');
+        $geocoder = $this->container->get('giko_baidu_map.geocoder');
 
         $this->assertInstanceOf('Geocoder\Geocoder', $geocoder);
     }
@@ -1305,8 +1305,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertSame(
-            $this->container->get('ivory_google_map.geocoder'),
-            $this->container->get('ivory_google_map.geocoder')
+            $this->container->get('giko_baidu_map.geocoder'),
+            $this->container->get('giko_baidu_map.geocoder')
         );
     }
 
@@ -1315,7 +1315,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.directions_request'));
+        $this->assertFalse($this->container->has('giko_baidu_map.directions_request'));
     }
 
     public function testDirectionsRequestServiceWithEnabledConfiguration()
@@ -1323,7 +1323,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'directions_enabled');
         $this->container->compile();
 
-        $request = $this->container->get('ivory_google_map.directions_request');
+        $request = $this->container->get('giko_baidu_map.directions_request');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\Directions\DirectionsRequest', $request);
         $this->assertFalse($request->hasAvoidHighWays());
@@ -1345,7 +1345,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'directions_request');
         $this->container->compile();
 
-        $request = $this->container->get('ivory_google_map.directions_request');
+        $request = $this->container->get('giko_baidu_map.directions_request');
 
         $this->assertTrue($request->hasAvoidHighways());
         $this->assertTrue($request->getAvoidHighways());
@@ -1380,8 +1380,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.directions_request'),
-            $this->container->get('ivory_google_map.directions_request')
+            $this->container->get('giko_baidu_map.directions_request'),
+            $this->container->get('giko_baidu_map.directions_request')
         );
     }
 
@@ -1390,7 +1390,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.directions'));
+        $this->assertFalse($this->container->has('giko_baidu_map.directions'));
     }
 
     public function testDirectionsServiceWithEnabledConfiguration()
@@ -1398,7 +1398,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'directions_enabled');
         $this->container->compile();
 
-        $directions = $this->container->get('ivory_google_map.directions');
+        $directions = $this->container->get('giko_baidu_map.directions');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\Directions\Directions', $directions);
         $this->assertInstanceOf('Widop\HttpAdapter\CurlHttpAdapter', $directions->getHttpAdapter());
@@ -1412,7 +1412,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'directions');
         $this->container->compile();
 
-        $directions = $this->container->get('ivory_google_map.directions');
+        $directions = $this->container->get('giko_baidu_map.directions');
 
         $this->assertInstanceOf('Widop\HttpAdapter\StreamHttpAdapter', $directions->getHttpAdapter());
         $this->assertSame('https://directions', $directions->getUrl());
@@ -1426,8 +1426,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertSame(
-            $this->container->get('ivory_google_map.directions'),
-            $this->container->get('ivory_google_map.directions')
+            $this->container->get('giko_baidu_map.directions'),
+            $this->container->get('giko_baidu_map.directions')
         );
     }
 
@@ -1436,7 +1436,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.distance_matrix_request'));
+        $this->assertFalse($this->container->has('giko_baidu_map.distance_matrix_request'));
     }
 
     public function testDistanceMatrixRequestServiceWithEnabledConfiguration()
@@ -1444,7 +1444,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'distance_matrix_enabled');
         $this->container->compile();
 
-        $request = $this->container->get('ivory_google_map.distance_matrix_request');
+        $request = $this->container->get('giko_baidu_map.distance_matrix_request');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest', $request);
         $this->assertFalse($request->hasAvoidHighWays());
@@ -1463,7 +1463,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'distance_matrix_request');
         $this->container->compile();
 
-        $request = $this->container->get('ivory_google_map.distance_matrix_request');
+        $request = $this->container->get('giko_baidu_map.distance_matrix_request');
 
         $this->assertTrue($request->hasAvoidHighways());
         $this->assertTrue($request->getAvoidHighways());
@@ -1492,8 +1492,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertNotSame(
-            $this->container->get('ivory_google_map.distance_matrix_request'),
-            $this->container->get('ivory_google_map.distance_matrix_request')
+            $this->container->get('giko_baidu_map.distance_matrix_request'),
+            $this->container->get('giko_baidu_map.distance_matrix_request')
         );
     }
 
@@ -1502,7 +1502,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'empty');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('ivory_google_map.distance_matrix'));
+        $this->assertFalse($this->container->has('giko_baidu_map.distance_matrix'));
     }
 
     public function testDistanceMatrixServiceWithEnabledConfiguration()
@@ -1510,7 +1510,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'distance_matrix_enabled');
         $this->container->compile();
 
-        $distanceMatrix = $this->container->get('ivory_google_map.distance_matrix');
+        $distanceMatrix = $this->container->get('giko_baidu_map.distance_matrix');
 
         $this->assertInstanceOf('Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrix', $distanceMatrix);
         $this->assertInstanceOf('Widop\HttpAdapter\CurlHttpAdapter', $distanceMatrix->getHttpAdapter());
@@ -1524,7 +1524,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'distance_matrix');
         $this->container->compile();
 
-        $distanceMatrix = $this->container->get('ivory_google_map.distance_matrix');
+        $distanceMatrix = $this->container->get('giko_baidu_map.distance_matrix');
 
         $this->assertInstanceOf('Widop\HttpAdapter\StreamHttpAdapter', $distanceMatrix->getHttpAdapter());
         $this->assertSame('https://distance_matrix', $distanceMatrix->getUrl());
@@ -1538,8 +1538,8 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertSame(
-            $this->container->get('ivory_google_map.distance_matrix'),
-            $this->container->get('ivory_google_map.distance_matrix')
+            $this->container->get('giko_baidu_map.distance_matrix'),
+            $this->container->get('giko_baidu_map.distance_matrix')
         );
     }
 
@@ -1550,7 +1550,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
 
         $this->assertInstanceOf(
             'Ivory\GoogleMap\Helper\MapHelper',
-            $this->container->get('ivory_google_map.helper.map')
+            $this->container->get('giko_baidu_map.helper.map')
         );
     }
 
@@ -1559,162 +1559,162 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'helpers');
         $this->container->compile();
 
-        $mapHelper = $this->container->get('ivory_google_map.helper.map');
+        $mapHelper = $this->container->get('giko_baidu_map.helper.map');
 
-        $this->assertInstanceOf('Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\MapHelper', $mapHelper);
+        $this->assertInstanceOf('Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\MapHelper', $mapHelper);
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\MapTypeIdHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\MapTypeIdHelper',
             $mapHelper->getMapTypeIdHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Base\CoordinateHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Base\CoordinateHelper',
             $mapHelper->getCoordinateHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Base\BoundHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Base\BoundHelper',
             $mapHelper->getBoundHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Base\PointHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Base\PointHelper',
             $mapHelper->getPointHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Base\SizeHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Base\SizeHelper',
             $mapHelper->getSizeHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\ControlPositionHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\ControlPositionHelper',
             $mapHelper->getMapTypeControlHelper()->getControlPositionHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\MapTypeControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\MapTypeControlHelper',
             $mapHelper->getMapTypeControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\MapTypeControlStyleHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\MapTypeControlStyleHelper',
             $mapHelper->getMapTypeControlHelper()->getMapTypeControlStyleHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\OverviewMapControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\OverviewMapControlHelper',
             $mapHelper->getOverviewMapControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\PanControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\PanControlHelper',
             $mapHelper->getPanControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\RotateControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\RotateControlHelper',
             $mapHelper->getRotateControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\ScaleControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\ScaleControlHelper',
             $mapHelper->getScaleControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\ScaleControlStyleHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\ScaleControlStyleHelper',
             $mapHelper->getScaleControlHelper()->getScaleControlStyleHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\StreetViewControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\StreetViewControlHelper',
             $mapHelper->getStreetViewControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\ZoomControlHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\ZoomControlHelper',
             $mapHelper->getZoomControlHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls\ZoomControlStyleHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls\ZoomControlStyleHelper',
             $mapHelper->getZoomControlHelper()->getZoomControlStyleHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerClusterHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerClusterHelper',
             $mapHelper->getMarkerClusterHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\AnimationHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\AnimationHelper',
             $mapHelper->getMarkerClusterHelper()->getHelper(MarkerCluster::_DEFAULT)->getMarkerHelper()->getAnimationHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\CircleHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\CircleHelper',
             $mapHelper->getCircleHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\EncodedPolylineHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\EncodedPolylineHelper',
             $mapHelper->getEncodedPolylineHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\GroundOverlayHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\GroundOverlayHelper',
             $mapHelper->getGroundOverlayHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\InfoWindowHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\InfoWindowHelper',
             $mapHelper->getInfoWindowHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerHelper',
             $mapHelper->getMarkerClusterHelper()->getHelper(MarkerCluster::_DEFAULT)->getMarkerHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerImageHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerImageHelper',
             $mapHelper->getMarkerImageHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerShapeHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerShapeHelper',
             $mapHelper->getMarkerShapeHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\PolygonHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\PolygonHelper',
             $mapHelper->getPolygonHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\PolylineHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\PolylineHelper',
             $mapHelper->getPolylineHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\RectangleHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\RectangleHelper',
             $mapHelper->getRectangleHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Layers\KMLLayerHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Layers\KMLLayerHelper',
             $mapHelper->getKmlLayerHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Events\EventManagerHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Events\EventManagerHelper',
             $mapHelper->getEventManagerHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Geometry\EncodingHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Geometry\EncodingHelper',
             $mapHelper->getEncodedPolylineHelper()->getEncodingHelper()
         );
 
@@ -1723,12 +1723,12 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->assertInstanceOf('Ivory\GoogleMap\Helper\Extension\CoreExtensionHelper', $coreExtensionHelper);
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\ApiHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\ApiHelper',
             $coreExtensionHelper->getApiHelper()
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerClusterHelper',
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays\MarkerClusterHelper',
             $coreExtensionHelper->getMarkerClusterHelper()
         );
     }
@@ -1739,168 +1739,168 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->container->compile();
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Map',
-            $this->container->get('ivory_google_map.map')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Map',
+            $this->container->get('giko_baidu_map.map')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Base\Coordinate',
-            $this->container->get('ivory_google_map.coordinate')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Base\Coordinate',
+            $this->container->get('giko_baidu_map.coordinate')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Base\Bound',
-            $this->container->get('ivory_google_map.bound')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Base\Bound',
+            $this->container->get('giko_baidu_map.bound')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Base\Point',
-            $this->container->get('ivory_google_map.point')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Base\Point',
+            $this->container->get('giko_baidu_map.point')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Base\Size',
-            $this->container->get('ivory_google_map.size')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Base\Size',
+            $this->container->get('giko_baidu_map.size')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\MapTypeControl',
-            $this->container->get('ivory_google_map.map_type_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\MapTypeControl',
+            $this->container->get('giko_baidu_map.map_type_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\OverviewMapControl',
-            $this->container->get('ivory_google_map.overview_map_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\OverviewMapControl',
+            $this->container->get('giko_baidu_map.overview_map_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\PanControl',
-            $this->container->get('ivory_google_map.pan_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\PanControl',
+            $this->container->get('giko_baidu_map.pan_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\RotateControl',
-            $this->container->get('ivory_google_map.rotate_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\RotateControl',
+            $this->container->get('giko_baidu_map.rotate_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\ScaleControl',
-            $this->container->get('ivory_google_map.scale_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\ScaleControl',
+            $this->container->get('giko_baidu_map.scale_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\StreetViewControl',
-            $this->container->get('ivory_google_map.street_view_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\StreetViewControl',
+            $this->container->get('giko_baidu_map.street_view_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Controls\ZoomControl',
-            $this->container->get('ivory_google_map.zoom_control')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Controls\ZoomControl',
+            $this->container->get('giko_baidu_map.zoom_control')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\Circle',
-            $this->container->get('ivory_google_map.circle')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\Circle',
+            $this->container->get('giko_baidu_map.circle')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\EncodedPolyline',
-            $this->container->get('ivory_google_map.encoded_polyline')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\EncodedPolyline',
+            $this->container->get('giko_baidu_map.encoded_polyline')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\GroundOverlay',
-            $this->container->get('ivory_google_map.ground_overlay')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\GroundOverlay',
+            $this->container->get('giko_baidu_map.ground_overlay')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\InfoWindow',
-            $this->container->get('ivory_google_map.info_window')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\InfoWindow',
+            $this->container->get('giko_baidu_map.info_window')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\MarkerCluster',
-            $this->container->get('ivory_google_map.marker_cluster')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\MarkerCluster',
+            $this->container->get('giko_baidu_map.marker_cluster')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\Marker',
-            $this->container->get('ivory_google_map.marker')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\Marker',
+            $this->container->get('giko_baidu_map.marker')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\MarkerImage',
-            $this->container->get('ivory_google_map.marker_image')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\MarkerImage',
+            $this->container->get('giko_baidu_map.marker_image')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\MarkerShape',
-            $this->container->get('ivory_google_map.marker_shape')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\MarkerShape',
+            $this->container->get('giko_baidu_map.marker_shape')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\Polygon',
-            $this->container->get('ivory_google_map.polygon')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\Polygon',
+            $this->container->get('giko_baidu_map.polygon')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\Polyline',
-            $this->container->get('ivory_google_map.polyline')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\Polyline',
+            $this->container->get('giko_baidu_map.polyline')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays\Rectangle',
-            $this->container->get('ivory_google_map.rectangle')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays\Rectangle',
+            $this->container->get('giko_baidu_map.rectangle')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Layers\KMLLayer',
-            $this->container->get('ivory_google_map.kml_layer')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Layers\KMLLayer',
+            $this->container->get('giko_baidu_map.kml_layer')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Events\EventManager',
-            $this->container->get('ivory_google_map.event_manager')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Events\EventManager',
+            $this->container->get('giko_baidu_map.event_manager')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Events\Event',
-            $this->container->get('ivory_google_map.event')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Events\Event',
+            $this->container->get('giko_baidu_map.event')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\BusinessAccount',
-            $this->container->get('ivory_google_map.business_account')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\BusinessAccount',
+            $this->container->get('giko_baidu_map.business_account')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\Geocoding\Geocoder',
-            $this->container->get('ivory_google_map.geocoder')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\Geocoding\Geocoder',
+            $this->container->get('giko_baidu_map.geocoder')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\Geocoding\GeocoderRequest',
-            $this->container->get('ivory_google_map.geocoder_request')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\Geocoding\GeocoderRequest',
+            $this->container->get('giko_baidu_map.geocoder_request')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\Directions\Directions',
-            $this->container->get('ivory_google_map.directions')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\Directions\Directions',
+            $this->container->get('giko_baidu_map.directions')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\Directions\DirectionsRequest',
-            $this->container->get('ivory_google_map.directions_request')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\Directions\DirectionsRequest',
+            $this->container->get('giko_baidu_map.directions_request')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\DistanceMatrix\DistanceMatrix',
-            $this->container->get('ivory_google_map.distance_matrix')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\DistanceMatrix\DistanceMatrix',
+            $this->container->get('giko_baidu_map.distance_matrix')
         );
 
         $this->assertInstanceOf(
-            'Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\DistanceMatrix\DistanceMatrixRequest',
-            $this->container->get('ivory_google_map.distance_matrix_request')
+            'Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\DistanceMatrix\DistanceMatrixRequest',
+            $this->container->get('giko_baidu_map.distance_matrix_request')
         );
     }
 
@@ -1909,7 +1909,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends \PHPUnit_Framework_Te
         $this->loadConfiguration($this->container, 'extension_helpers');
         $this->container->compile();
 
-        $extensionHelpers = $this->container->get('ivory_google_map.helper.map')->getExtensionHelpers();
+        $extensionHelpers = $this->container->get('giko_baidu_map.helper.map')->getExtensionHelpers();
 
         $this->assertCount(2, $extensionHelpers);
 

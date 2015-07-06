@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder;
+use Giko\BaiduMapBundle\Model\Base\CoordinateBuilder;
+use Giko\BaiduMapBundle\Model\Base\BoundBuilder;
+use Giko\BaiduMapBundle\Model\Overlays\RectangleBuilder;
 
 /**
  * Rectangle builder test.
@@ -22,10 +22,10 @@ use Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder;
  */
 class RectangleBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\RectangleBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Overlays\RectangleBuilder */
     protected $rectangleBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
     /**

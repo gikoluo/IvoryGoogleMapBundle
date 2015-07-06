@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Entity;
+namespace Giko\BaiduMapBundle\Entity;
 
 use Ivory\GoogleMap\Controls\MapTypeControl as BaseMapTypeControl;
 

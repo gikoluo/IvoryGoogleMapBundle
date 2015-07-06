@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper;
 
 use Ivory\GoogleMap\Helper\ApiHelper as BaseApiHelper;
 

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Giko\BaiduMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Zoom control builder.
@@ -41,7 +41,7 @@ class ZoomControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\ZoomControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {
@@ -65,7 +65,7 @@ class ZoomControlBuilder extends AbstractBuilder
      *
      * @param string $zoomControlStyle The zoom control style.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\ZoomControlBuilder The builder.
      */
     public function setZoomControlStyle($zoomControlStyle)
     {

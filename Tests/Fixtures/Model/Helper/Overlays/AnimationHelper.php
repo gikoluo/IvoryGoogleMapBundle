@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Overlays;
 
 use Ivory\GoogleMap\Helper\Overlays\AnimationHelper as BaseAnimationHelper;
 

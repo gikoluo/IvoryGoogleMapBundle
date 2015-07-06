@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Giko\BaiduMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Street view control builder.
@@ -38,7 +38,7 @@ class StreetViewControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\StreetViewControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\StreetViewControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {

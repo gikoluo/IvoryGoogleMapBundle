@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Events;
+namespace Giko\BaiduMapBundle\Tests\Model\Events;
 
-use Ivory\GoogleMapBundle\Model\Events\EventBuilder;
-use Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder;
+use Giko\BaiduMapBundle\Model\Events\EventBuilder;
+use Giko\BaiduMapBundle\Model\Events\EventManagerBuilder;
 
 /**
  * Event manager builder test.
@@ -21,10 +21,10 @@ use Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder;
  */
 class EventManagerBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Events\EventManagerBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Events\EventManagerBuilder */
     protected $eventManagerBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Events\EventBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Events\EventBuilder */
     protected $eventBuilder;
 
     /**

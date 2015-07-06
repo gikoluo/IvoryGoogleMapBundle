@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model;
+namespace Giko\BaiduMapBundle\Tests\Model;
 
 /**
  * Abstract builder test.
@@ -18,7 +18,7 @@ namespace Ivory\GoogleMapBundle\Tests\Model;
  */
 class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\AbstractBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\AbstractBuilder */
     protected $builder;
 
     /**
@@ -26,7 +26,7 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->builder = $this->getMockBuilder('Ivory\GoogleMapBundle\Model\AbstractBuilder')
+        $this->builder = $this->getMockBuilder('Giko\BaiduMapBundle\Model\AbstractBuilder')
             ->setConstructorArgs(array('\stdClass'))
             ->getMockForAbstractClass();
     }

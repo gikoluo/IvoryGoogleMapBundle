@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\EventListener;
+namespace Giko\BaiduMapBundle\EventListener;
 
 use InvalidArgumentException;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;

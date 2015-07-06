@@ -5,13 +5,13 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <parameters>
-        <parameter key="ivory_google_map.template.helper.class">Ivory\GoogleMapBundle\Helper\TemplateHelper</parameter>
+        <parameter key="giko_baidu_map.template.helper.class">Giko\BaiduMapBundle\Helper\TemplateHelper</parameter>
     </parameters>
 
     <services>
-        <service id="ivory_google_map.template.helper" class="%ivory_google_map.template.helper.class%">
-            <argument type="service" id="ivory_google_map.helper.map" />
-            <tag name="templating.helper" alias="ivory_google_map" />
+        <service id="giko_baidu_map.template.helper" class="%giko_baidu_map.template.helper.class%">
+            <argument type="service" id="giko_baidu_map.helper.map" />
+            <tag name="templating.helper" alias="giko_baidu_map" />
         </service>
     </services>
 </container>

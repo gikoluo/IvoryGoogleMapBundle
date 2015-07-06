@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Layers;
+namespace Giko\BaiduMapBundle\Tests\Model\Layers;
 
-use Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder;
+use Giko\BaiduMapBundle\Model\Layers\KMLLayerBuilder;
 
 /**
  * KML layer builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder;
  */
 class KMLLayerBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Layers\KMLLayerBuilder */
     protected $kmlLayerBuilder;
 
     /**

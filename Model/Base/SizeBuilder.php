@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Base;
+namespace Giko\BaiduMapBundle\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Size builder.
@@ -50,7 +50,7 @@ class SizeBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\SizeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\SizeBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -74,7 +74,7 @@ class SizeBuilder extends AbstractBuilder
      *
      * @param double $width The size width.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\SizeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\SizeBuilder The builder.
      */
     public function setWidth($width)
     {
@@ -98,7 +98,7 @@ class SizeBuilder extends AbstractBuilder
      *
      * @param double $height The size height.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\SizeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\SizeBuilder The builder.
      */
     public function setHeight($height)
     {
@@ -122,7 +122,7 @@ class SizeBuilder extends AbstractBuilder
      *
      * @param string $widthUnit The size width unit.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\SizeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\SizeBuilder The builder.
      */
     public function setWidthUnit($widthUnit)
     {
@@ -146,7 +146,7 @@ class SizeBuilder extends AbstractBuilder
      *
      * @param string $heightUnit The size height unit.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\SizeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\SizeBuilder The builder.
      */
     public function setHeightUnit($heightUnit)
     {

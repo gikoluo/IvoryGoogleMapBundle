@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Services\Geocoding;
+namespace Giko\BaiduMapBundle\Tests\Model\Services\Geocoding;
 
-use Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder;
+use Giko\BaiduMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder;
 
 /**
  * Geocoder request builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder;
  */
 class GeocoderRequestBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Services\Geocoding\GeocoderRequestBuilder */
     protected $geocoderRequestBuilder;
 
     /**

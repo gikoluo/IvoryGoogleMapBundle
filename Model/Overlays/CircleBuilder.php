@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Giko\BaiduMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\Base\CoordinateBuilder;
 
 /**
  * Circle builder.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
  */
 class CircleBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /** @var string */
@@ -40,7 +40,7 @@ class CircleBuilder extends AbstractBuilder
      * Creates a circle builder.
      *
      * @param string                                              $class             The class to build.
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      */
     public function __construct($class, CoordinateBuilder $coordinateBuilder)
     {
@@ -63,9 +63,9 @@ class CircleBuilder extends AbstractBuilder
     /**
      * Sets the coordinate builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\CircleBuilder The builder.
      */
     public function setCoordinateBuilder(CoordinateBuilder $coordinateBuilder)
     {
@@ -89,7 +89,7 @@ class CircleBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\CircleBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -115,7 +115,7 @@ class CircleBuilder extends AbstractBuilder
      * @param double  $longitude The center longitude.
      * @param boolean $noWrap    The center no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\CircleBuilder The builder.
      */
     public function setCenter($latitude, $longitude, $noWrap = true)
     {
@@ -139,7 +139,7 @@ class CircleBuilder extends AbstractBuilder
      *
      * @param double $radius The radius.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\CircleBuilder The builder.
      */
     public function setRadius($radius)
     {
@@ -163,7 +163,7 @@ class CircleBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\CircleBuilder The builder.
      */
     public function setOptions(array $options)
     {

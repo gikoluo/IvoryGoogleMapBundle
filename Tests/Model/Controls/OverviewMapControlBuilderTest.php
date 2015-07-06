@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Giko\BaiduMapBundle\Tests\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder;
+use Giko\BaiduMapBundle\Model\Controls\OverviewMapControlBuilder;
 
 /**
  * Overview map control builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder;
  */
 class OverviewMapControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Controls\OverviewMapControlBuilder */
     protected $overviewMapControlBuilder;
 
     /**

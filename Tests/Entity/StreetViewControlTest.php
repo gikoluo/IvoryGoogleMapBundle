@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Entity;
+namespace Giko\BaiduMapBundle\Tests\Entity;
 
-use Ivory\GoogleMapBundle\Entity\StreetViewControl;
+use Giko\BaiduMapBundle\Entity\StreetViewControl;
 
 /**
  * Street view control entity test.

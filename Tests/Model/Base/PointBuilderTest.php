@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Base;
+namespace Giko\BaiduMapBundle\Tests\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
+use Giko\BaiduMapBundle\Model\Base\PointBuilder;
 
 /**
  * Point builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
  */
 class PointBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\PointBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\PointBuilder */
     protected $pointBuilder;
 
     /**

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder;
+use Giko\BaiduMapBundle\Model\Overlays\EncodedPolylineBuilder;
 
 /**
  * Encoded polyline builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder;
  */
 class EncodedPolylineBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Overlays\EncodedPolylineBuilder */
     protected $encodedPolylineBuilder;
 
     /**

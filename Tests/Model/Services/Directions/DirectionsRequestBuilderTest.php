@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Services\Directions;
+namespace Giko\BaiduMapBundle\Tests\Model\Services\Directions;
 
 use Ivory\GoogleMap\Services\Base\TravelMode;
 use Ivory\GoogleMap\Services\Base\UnitSystem;
-use Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder;
+use Giko\BaiduMapBundle\Model\Services\Directions\DirectionsRequestBuilder;
 
 /**
  * Directions request builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder;
  */
 class DirectionsRequestBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Services\Directions\DirectionsRequestBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Services\Directions\DirectionsRequestBuilder */
     protected $directionsRequestBuilder;
 
     /**

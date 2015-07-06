@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Entity;
+namespace Giko\BaiduMapBundle\Tests\Entity;
 
-use Ivory\GoogleMapBundle\Entity\InfoWindow;
+use Giko\BaiduMapBundle\Entity\InfoWindow;
 
 /**
  * Info window entity test.

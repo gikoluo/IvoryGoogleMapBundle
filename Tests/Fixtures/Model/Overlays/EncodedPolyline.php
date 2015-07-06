@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Overlays;
 
 use Ivory\GoogleMap\Overlays\EncodedPolyline as BaseEncodedPolyline;
 

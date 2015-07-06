@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Twig;
+namespace Giko\BaiduMapBundle\Twig;
 
 use Ivory\GoogleMap\Map;
-use Ivory\GoogleMapBundle\Helper\TemplateHelper;
+use Giko\BaiduMapBundle\Helper\TemplateHelper;
 use Twig_SimpleFunction;
 
 /**
@@ -20,15 +20,15 @@ use Twig_SimpleFunction;
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class GoogleMapExtension extends \Twig_Extension
+class BaiduMapExtension extends \Twig_Extension
 {
-    /** @var \Ivory\GoogleMapBundle\Helper\TemplateHelper */
+    /** @var \Giko\BaiduMapBundle\Helper\TemplateHelper */
     protected $templateHelper;
 
     /**
      * Create the google map twig extension.
      *
-     * @param \Ivory\GoogleMapBundle\Helper\TemplateHelper $templateHelper The template helper.
+     * @param \Giko\BaiduMapBundle\Helper\TemplateHelper $templateHelper The template helper.
      */
     public function __construct(TemplateHelper $templateHelper)
     {
@@ -108,6 +108,6 @@ class GoogleMapExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'ivory_google_map';
+        return 'giko_baidu_map';
     }
 }

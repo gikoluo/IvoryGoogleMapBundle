@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Model\Overlays;
 
 use Ivory\GoogleMap\Overlays\MarkerCluster;
-use Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder;
+use Giko\BaiduMapBundle\Model\Overlays\MarkerClusterBuilder;
 
 /**
  * Marker cluster builder test.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder;
  */
 class MarkerClusterBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Overlays\MarkerClusterBuilder */
     protected $markerClusterBuilder;
 
     /**

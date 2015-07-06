@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder;
+use Giko\BaiduMapBundle\Model\Base\CoordinateBuilder;
+use Giko\BaiduMapBundle\Model\Overlays\CircleBuilder;
 
 /**
  * Circle builder test.
@@ -21,10 +21,10 @@ use Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder;
  */
 class CircleBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\CircleBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Overlays\CircleBuilder */
     protected $circleBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /**

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Form\Type;
+namespace Giko\BaiduMapBundle\Form\Type;
 
 use Ivory\GoogleMap\Helper\Places\AutocompleteHelper;
 use Ivory\GoogleMap\Places\Autocomplete;
@@ -37,7 +37,7 @@ class PlacesAutocompleteType extends AbstractType
      * Creates a places autocomplete form type.
      *
      * @param \Ivory\GoogleMap\Helper\Places\AutocompleteHelper $autocompleteHelper The autocomplete helper.
-     * @param \Ivory\GoogleMapBundle\Form\Type\Request          $request            The http request.
+     * @param \Giko\BaiduMapBundle\Form\Type\Request          $request            The http request.
      */
     public function __construct(AutocompleteHelper $autocompleteHelper, Request $request)
     {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle;
+namespace Giko\BaiduMapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class IvoryGoogleMapBundle extends Bundle
+class GikoBaiduMapBundle extends Bundle
 {
 
 }

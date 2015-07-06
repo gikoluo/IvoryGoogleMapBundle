@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\DistanceMatrix;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\DistanceMatrix;
 
 use Ivory\GoogleMap\Services\DistanceMatrix\DistanceMatrixRequest as BaseDistanceMatrixRequest;
 

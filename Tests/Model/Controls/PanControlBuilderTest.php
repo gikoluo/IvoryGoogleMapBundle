@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Giko\BaiduMapBundle\Tests\Model\Controls;
 
 use Ivory\GoogleMap\Controls\ControlPosition;
-use Ivory\GoogleMapBundle\Model\Controls\PanControlBuilder;
+use Giko\BaiduMapBundle\Model\Controls\PanControlBuilder;
 
 /**
  * Pan control builder test.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Controls\PanControlBuilder;
  */
 class PanControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\PanControlBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Controls\PanControlBuilder */
     protected $panControlBuilder;
 
     /**

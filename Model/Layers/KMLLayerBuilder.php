@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Layers;
+namespace Giko\BaiduMapBundle\Model\Layers;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * KML layer builder.
@@ -54,7 +54,7 @@ class KMLLayerBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Layers\KMLLayerBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -78,7 +78,7 @@ class KMLLayerBuilder extends AbstractBuilder
      *
      * @param string $url The KML layer url.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Layers\KMLLayerBuilder The builder.
      */
     public function setUrl($url)
     {
@@ -102,7 +102,7 @@ class KMLLayerBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Layers\KMLLayerBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Layers\KMLLayerBuilder The builder.
      */
     public function setOptions(array $options)
     {

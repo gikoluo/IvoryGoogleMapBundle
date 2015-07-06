@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Model\Overlays;
 
 use Ivory\GoogleMap\Events\MouseEvent;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder;
+use Giko\BaiduMapBundle\Model\Base\CoordinateBuilder;
+use Giko\BaiduMapBundle\Model\Base\SizeBuilder;
+use Giko\BaiduMapBundle\Model\Overlays\InfoWindowBuilder;
 
 /**
  * Info window builder test.
@@ -23,13 +23,13 @@ use Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder;
  */
 class InfoWindowBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Overlays\InfoWindowBuilder */
     protected $infoWindowBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /**

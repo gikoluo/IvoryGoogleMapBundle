@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Helper;
+namespace Giko\BaiduMapBundle\Helper;
 
 use Ivory\GoogleMap\Helper\MapHelper;
 use Ivory\GoogleMap\Map;
@@ -88,6 +88,6 @@ class TemplateHelper extends Helper
      */
     public function getName()
     {
-        return 'ivory_google_map';
+        return 'giko_baidu_map';
     }
 }

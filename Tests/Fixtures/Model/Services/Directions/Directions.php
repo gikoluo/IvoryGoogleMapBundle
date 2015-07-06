@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\Directions;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\Directions;
 
 use Ivory\GoogleMap\Services\Directions\Directions as BaseDirections;
 

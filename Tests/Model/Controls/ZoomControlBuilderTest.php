@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Giko\BaiduMapBundle\Tests\Model\Controls;
 
 use Ivory\GoogleMap\Controls\ControlPosition;
 use Ivory\GoogleMap\Controls\ZoomControlStyle;
-use Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder;
+use Giko\BaiduMapBundle\Model\Controls\ZoomControlBuilder;
 
 /**
  * Zoom control builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder;
  */
 class ZoomControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\ZoomControlBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Controls\ZoomControlBuilder */
     protected $zoomControlBuilder;
 
     /**

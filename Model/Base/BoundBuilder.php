@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Base;
+namespace Giko\BaiduMapBundle\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Bound builder.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\AbstractBuilder;
  */
 class BoundBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /** @var string */
@@ -36,7 +36,7 @@ class BoundBuilder extends AbstractBuilder
      * Creates a bound builder.
      *
      * @param string                                              $class             The bound class.
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      */
     public function __construct($class, CoordinateBuilder $coordinateBuilder)
     {
@@ -49,7 +49,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Gets the coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The coordinate builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder The coordinate builder.
      */
     public function getCoordinateBuilder()
     {
@@ -59,9 +59,9 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Sets the coordinate builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
+     * @param \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder $coordinateBuilder The coordinate builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setCoordinateBuilder(CoordinateBuilder $coordinateBuilder)
     {
@@ -85,7 +85,7 @@ class BoundBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -111,7 +111,7 @@ class BoundBuilder extends AbstractBuilder
      * @param double  $longitude The longitude.
      * @param boolean $noWrap    The no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setSouthWest($latitude, $longitude, $noWrap = true)
     {
@@ -133,7 +133,7 @@ class BoundBuilder extends AbstractBuilder
     /**
      * Sets the bound north east.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\BoundBuilder The builder.
      */
     public function setNorthEast($latitude, $longitude, $noWrap = true)
     {

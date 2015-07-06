@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Twig;
+namespace Giko\BaiduMapBundle\Tests\Twig;
 
-use Ivory\GoogleMapBundle\Twig\GoogleMapExtension;
+use Giko\BaiduMapBundle\Twig\GoogleMapExtension;
 
 /**
  * Google map extension test.
@@ -23,7 +23,7 @@ class GoogleMapExtensionTest extends \PHPUnit_Framework_TestCase
     /** @var \Twig_Environment */
     protected $twig;
 
-    /** @var \Ivory\GoogleMapBundle\Helper\TemplateHelper */
+    /** @var \Giko\BaiduMapBundle\Helper\TemplateHelper */
     protected $templateHelperMock;
 
     /**
@@ -31,7 +31,7 @@ class GoogleMapExtensionTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->templateHelperMock = $this->getMockBuilder('Ivory\GoogleMapBundle\Helper\TemplateHelper')
+        $this->templateHelperMock = $this->getMockBuilder('Giko\BaiduMapBundle\Helper\TemplateHelper')
             ->disableOriginalConstructor()
             ->getMock();
 

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Entity;
+namespace Giko\BaiduMapBundle\Tests\Entity;
 
-use Ivory\GoogleMapBundle\Entity\MarkerShape;
+use Giko\BaiduMapBundle\Entity\MarkerShape;
 
 /**
  * Marker shape entity test.

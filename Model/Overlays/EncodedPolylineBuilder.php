@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Giko\BaiduMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Encoded polyline builder.
@@ -54,7 +54,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -78,7 +78,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
      *
      * @param string $value The value.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
      */
     public function setValue($value)
     {
@@ -102,7 +102,7 @@ class EncodedPolylineBuilder extends AbstractBuilder
      * The builder.
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\EncodedPolylineBuilder The builder.
      */
     public function setOptions(array $options)
     {

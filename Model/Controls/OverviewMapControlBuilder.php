@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Giko\BaiduMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Overview map control builder.
@@ -38,7 +38,7 @@ class OverviewMapControlBuilder extends AbstractBuilder
      *
      * @param boolean $opened The opened flag.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\OverviewMapControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\OverviewMapControlBuilder The builder.
      */
     public function setOpened($opened)
     {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Helper\Controls;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Helper\Controls;
 
 use Ivory\GoogleMap\Helper\Controls\PanControlHelper as BasePanControlHelper;
 

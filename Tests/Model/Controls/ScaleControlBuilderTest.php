@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Giko\BaiduMapBundle\Tests\Model\Controls;
 
 use Ivory\GoogleMap\Controls\ControlPosition;
 use Ivory\GoogleMap\Controls\ScaleControlStyle;
-use Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder;
+use Giko\BaiduMapBundle\Model\Controls\ScaleControlBuilder;
 
 /**
  * Scale control builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder;
  */
 class ScaleControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Controls\ScaleControlBuilder */
     protected $scaleControlBuilder;
 
     /**

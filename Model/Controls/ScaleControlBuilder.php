@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Giko\BaiduMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Scale control builder.
@@ -41,7 +41,7 @@ class ScaleControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\ScaleControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {
@@ -65,7 +65,7 @@ class ScaleControlBuilder extends AbstractBuilder
      *
      * @param string $scaleControlStyle The scale control style.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\ScaleControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\ScaleControlBuilder The builder.
      */
     public function setScaleControlStyle($scaleControlStyle)
     {

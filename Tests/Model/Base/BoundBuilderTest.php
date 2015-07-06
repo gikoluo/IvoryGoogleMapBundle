@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Base;
+namespace Giko\BaiduMapBundle\Tests\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
-use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
+use Giko\BaiduMapBundle\Model\Base\BoundBuilder;
+use Giko\BaiduMapBundle\Model\Base\CoordinateBuilder;
 
 /**
  * Bound builder test.
@@ -21,10 +21,10 @@ use Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder;
  */
 class BoundBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder */
     protected $coordinateBuilder;
 
     /**

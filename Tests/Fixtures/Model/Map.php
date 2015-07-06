@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model;
 
 use Ivory\GoogleMap\Map as BaseMap;
 

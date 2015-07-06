@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Giko\BaiduMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
-use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\Base\BoundBuilder;
 
 /**
  * Ground overlay builder.
@@ -21,7 +21,7 @@ use Ivory\GoogleMapBundle\Model\Base\BoundBuilder;
  */
 class GroundOverlayBuilder extends AbstractBuilder
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\BoundBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\BoundBuilder */
     protected $boundBuilder;
 
     /** @var string */
@@ -40,7 +40,7 @@ class GroundOverlayBuilder extends AbstractBuilder
      * Creates a ground overlay builder.
      *
      * @param string                                         $class        The class to build.
-     * @param \Ivory\GoogleMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
+     * @param \Giko\BaiduMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
      */
     public function __construct($class, BoundBuilder $boundBuilder)
     {
@@ -52,7 +52,7 @@ class GroundOverlayBuilder extends AbstractBuilder
     /**
      * Gets the bound builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\BoundBuilder The bound builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\BoundBuilder The bound builder.
      */
     public function getBoundBuilder()
     {
@@ -62,9 +62,9 @@ class GroundOverlayBuilder extends AbstractBuilder
     /**
      * Sets the bound builder.
      *
-     * @param \Ivory\GoogleMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
+     * @param \Giko\BaiduMapBundle\Model\Base\BoundBuilder $boundBuilder The bound builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
      */
     public function setBoundBuilder(BoundBuilder $boundBuilder)
     {
@@ -88,7 +88,7 @@ class GroundOverlayBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -112,7 +112,7 @@ class GroundOverlayBuilder extends AbstractBuilder
      *
      * @param string $url The url.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
      */
     public function setUrl($url)
     {
@@ -141,7 +141,7 @@ class GroundOverlayBuilder extends AbstractBuilder
      * @param boolean $southWestNoWrap    The north east longitude.
      * @param boolean $northEastNoWrap    The north east no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
      */
     public function setBound(
         $southWestLatitude,
@@ -178,7 +178,7 @@ class GroundOverlayBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\GroundOverlayBuilder The builder.
      */
     public function setOptions(array $options)
     {

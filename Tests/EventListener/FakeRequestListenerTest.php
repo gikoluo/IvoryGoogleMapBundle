@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\EventListener;
+namespace Giko\BaiduMapBundle\Tests\EventListener;
 
-use Ivory\GoogleMapBundle\EventListener\FakeRequestListener;
+use Giko\BaiduMapBundle\EventListener\FakeRequestListener;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  */
 class FakeRequestListenerTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\EventListener\FakeRequestListener */
+    /** @var \Giko\BaiduMapBundle\EventListener\FakeRequestListener */
     protected $fakeRequestListener;
 
     /** @var \Symfony\Component\HttpKernel\Event\GetResponseEvent */

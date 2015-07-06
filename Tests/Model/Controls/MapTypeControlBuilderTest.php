@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Controls;
+namespace Giko\BaiduMapBundle\Tests\Model\Controls;
 
 use Ivory\GoogleMap\Controls\ControlPosition;
 use Ivory\GoogleMap\Controls\MapTypeControlStyle;
 use Ivory\GoogleMap\MapTypeId;
-use Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder;
+use Giko\BaiduMapBundle\Model\Controls\MapTypeControlBuilder;
 
 /**
  * Map type control builder test.
@@ -23,7 +23,7 @@ use Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder;
  */
 class MapTypeControlBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Controls\MapTypeControlBuilder */
     protected $mapTypeControlBuilder;
 
     /**

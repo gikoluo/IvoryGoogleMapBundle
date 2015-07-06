@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Giko\BaiduMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Polyline builder.
@@ -54,7 +54,7 @@ class PolylineBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\PolylineBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -80,7 +80,7 @@ class PolylineBuilder extends AbstractBuilder
      * @param double  $longitude The longitude.
      * @param boolean $noWrap    The no wrap.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\PolylineBuilder The builder.
      */
     public function addCoordinate($latitude, $longitude, $noWrap = true)
     {
@@ -104,7 +104,7 @@ class PolylineBuilder extends AbstractBuilder
      *
      * @param array $options The options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\PolylineBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\PolylineBuilder The builder.
      */
     public function setOptions(array $options)
     {

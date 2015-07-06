@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Overlays;
+namespace Giko\BaiduMapBundle\Tests\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\Base\PointBuilder;
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
-use Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder;
+use Giko\BaiduMapBundle\Model\Base\PointBuilder;
+use Giko\BaiduMapBundle\Model\Base\SizeBuilder;
+use Giko\BaiduMapBundle\Model\Overlays\MarkerImageBuilder;
 
 /**
  * Marker image builder test.
@@ -22,13 +22,13 @@ use Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder;
  */
 class MarkerImageBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Overlays\MarkerImageBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Overlays\MarkerImageBuilder */
     protected $markerImageBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\PointBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\PointBuilder */
     protected $pointBuilder;
 
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /**

@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Base;
+namespace Giko\BaiduMapBundle\Tests\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
+use Giko\BaiduMapBundle\Model\Base\SizeBuilder;
 
 /**
  * Size builder test.
@@ -20,7 +20,7 @@ use Ivory\GoogleMapBundle\Model\Base\SizeBuilder;
  */
 class SizeBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Base\SizeBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Base\SizeBuilder */
     protected $sizeBuilder;
 
     /**

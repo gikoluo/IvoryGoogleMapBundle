@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Layers;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Layers;
 
 use Ivory\GoogleMap\Layers\KMLLayer as BaseKMLLayer;
 

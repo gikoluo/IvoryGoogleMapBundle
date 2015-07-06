@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Events;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Events;
 
 use Ivory\GoogleMap\Events\EventManager as BaseEventManager;
 

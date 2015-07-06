@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model;
+namespace Giko\BaiduMapBundle\Model;
 
 use \InvalidArgumentException;
 
@@ -36,7 +36,7 @@ abstract class AbstractBuilder
     /**
      * Resets the builder.
      *
-     * @return \Ivory\GoogleMapBundle\Model\AbstractBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\AbstractBuilder The builder.
      */
     abstract public function reset();
 
@@ -64,7 +64,7 @@ abstract class AbstractBuilder
      *
      * @throws \InvalidArgumentException If the class is not valid.
      *
-     * @return \Ivory\GoogleMapBundle\Model\AbstractBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\AbstractBuilder The builder.
      */
     public function setClass($class)
     {

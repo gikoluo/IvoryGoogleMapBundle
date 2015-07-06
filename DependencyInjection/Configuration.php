@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\DependencyInjection;
+namespace Giko\BaiduMapBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -28,7 +28,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ivory_google_map');
+        $rootNode = $treeBuilder->root('giko_baidu_map');
 
         // Normalization section
         $this->addNormalizationSection($rootNode);

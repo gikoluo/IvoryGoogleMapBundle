@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Base;
+namespace Giko\BaiduMapBundle\Model\Base;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Coordinate builder.
@@ -47,7 +47,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -71,7 +71,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param double $latitude The coordinate latitude.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setLatitude($latitude)
     {
@@ -95,7 +95,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param double $longitude The coordinate longitude.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setLongitude($longitude)
     {
@@ -119,7 +119,7 @@ class CoordinateBuilder extends AbstractBuilder
      *
      * @param boolean $noWrap TRUE if the coordinate has no wrap else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Base\CoordinateBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Base\CoordinateBuilder The builder.
      */
     public function setNoWrap($noWrap)
     {

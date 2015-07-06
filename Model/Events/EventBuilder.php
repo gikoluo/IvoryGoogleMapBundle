@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Events;
+namespace Giko\BaiduMapBundle\Model\Events;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Event builder.
@@ -50,7 +50,7 @@ class EventBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Events\EventBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -74,7 +74,7 @@ class EventBuilder extends AbstractBuilder
      *
      * @param string $instance The instance.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Events\EventBuilder The builder.
      */
     public function setInstance($instance)
     {
@@ -98,7 +98,7 @@ class EventBuilder extends AbstractBuilder
      *
      * @param string $eventName The event name.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Events\EventBuilder The builder.
      */
     public function setEventName($eventName)
     {
@@ -122,7 +122,7 @@ class EventBuilder extends AbstractBuilder
      *
      * @param string $handle The handle.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Events\EventBuilder The builder.
      */
     public function setHandle($handle)
     {
@@ -146,7 +146,7 @@ class EventBuilder extends AbstractBuilder
      *
      * @param boolean $capture TRUE if the event capture else FALSE.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Events\EventBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Events\EventBuilder The builder.
      */
     public function setCapture($capture)
     {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Fixtures\Model\Services\Geocoding;
+namespace Giko\BaiduMapBundle\Tests\Fixtures\Model\Services\Geocoding;
 
 use Geocoder\Geocoder as BaseGeocoder;
 

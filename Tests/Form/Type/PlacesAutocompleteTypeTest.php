@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Form\Type;
+namespace Giko\BaiduMapBundle\Tests\Form\Type;
 
 use Ivory\GoogleMap\Places\AutocompleteComponentRestriction;
 use Ivory\GoogleMap\Places\AutocompleteType;
-use Ivory\GoogleMapBundle\Form\Type\PlacesAutocompleteType;
+use Giko\BaiduMapBundle\Form\Type\PlacesAutocompleteType;
 use Symfony\Component\Form\Forms;
 
 /**
@@ -26,7 +26,7 @@ class PlacesAutocompleteTypeTest extends \PHPUnit_Framework_TestCase
     /** @var \Symfony\Component\Form\FormFactoryInterface */
     protected $factory;
 
-    /** @var \Ivory\GoogleMapBundle\Form\Type\PlacesAutocompleteType */
+    /** @var \Giko\BaiduMapBundle\Form\Type\PlacesAutocompleteType */
     protected $placesAutocompleteType;
 
     /** @var \Ivory\GoogleMap\Helper\Places\AutocompleteHelper */

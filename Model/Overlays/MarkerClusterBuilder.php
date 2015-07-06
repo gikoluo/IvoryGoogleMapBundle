@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Giko\BaiduMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Marker cluster builder.
@@ -59,7 +59,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The marker cluster builder prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -83,7 +83,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param string $type The marker cluster builder type.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setType($type)
     {
@@ -107,7 +107,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param array $markers The marker cluster builder markers.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setMarkers(array $markers)
     {
@@ -131,7 +131,7 @@ class MarkerClusterBuilder extends AbstractBuilder
      *
      * @param array $options The marker cluster builder options.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerClusterBuilder The marker cluster builder.
      */
     public function setOptions(array $options)
     {

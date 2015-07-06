@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests\Model\Services\DistanceMatrix;
+namespace Giko\BaiduMapBundle\Tests\Model\Services\DistanceMatrix;
 
 use Ivory\GoogleMap\Services\Base\TravelMode;
 use Ivory\GoogleMap\Services\Base\UnitSystem;
-use Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder;
+use Giko\BaiduMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder;
 
 /**
  * Distance matrix request builder test.
@@ -22,7 +22,7 @@ use Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBui
  */
 class DistanceMatrixRequestBuilderTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var \Ivory\GoogleMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder */
+    /** @var \Giko\BaiduMapBundle\Model\Services\DistanceMatrix\DistanceMatrixRequestBuilder */
     protected $distanceMatrixRequestBuilder;
 
     /**

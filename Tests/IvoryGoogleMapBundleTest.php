@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Tests;
+namespace Giko\BaiduMapBundle\Tests;
 
-use Ivory\GoogleMapBundle\IvoryGoogleMapBundle;
+use Giko\BaiduMapBundle\IvoryGoogleMapBundle;
 
 /**
  * Ivory Google Map bundle test.

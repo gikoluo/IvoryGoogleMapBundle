@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Overlays;
+namespace Giko\BaiduMapBundle\Model\Overlays;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Marker shape builder.
@@ -54,7 +54,7 @@ class MarkerShapeBuilder extends AbstractBuilder
      *
      * @param string $prefixJavascriptVariable The prefix javascript variable.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
      */
     public function setPrefixJavascriptVariable($prefixJavascriptVariable)
     {
@@ -78,7 +78,7 @@ class MarkerShapeBuilder extends AbstractBuilder
      *
      * @param string $type The type.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
      */
     public function setType($type)
     {
@@ -102,7 +102,7 @@ class MarkerShapeBuilder extends AbstractBuilder
      *
      * @param array $coordinates The coordinates.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Overlays\MarkerShapeBuilder The builder.
      */
     public function setCoordinates(array $coordinates)
     {

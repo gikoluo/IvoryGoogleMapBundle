@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Ivory\GoogleMapBundle\Model\Controls;
+namespace Giko\BaiduMapBundle\Model\Controls;
 
-use Ivory\GoogleMapBundle\Model\AbstractBuilder;
+use Giko\BaiduMapBundle\Model\AbstractBuilder;
 
 /**
  * Map type control builder.
@@ -54,7 +54,7 @@ class MapTypeControlBuilder extends AbstractBuilder
      *
      * @param array $mapTypeIds The map types IDs.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\MapTypeControlBuilder The builder.
      */
     public function setMapTypeIds(array $mapTypeIds)
     {
@@ -78,7 +78,7 @@ class MapTypeControlBuilder extends AbstractBuilder
      *
      * @param string $controlPosition The control position.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\MapTypeControlBuilder The builder.
      */
     public function setControlPosition($controlPosition)
     {
@@ -102,7 +102,7 @@ class MapTypeControlBuilder extends AbstractBuilder
      *
      * @param string $mapTypeControlStyle The map type control style.
      *
-     * @return \Ivory\GoogleMapBundle\Model\Controls\MapTypeControlBuilder The builder.
+     * @return \Giko\BaiduMapBundle\Model\Controls\MapTypeControlBuilder The builder.
      */
     public function setMapTypeControlStyle($mapTypeControlStyle)
     {
